@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>VD | Ejemplo Scrolly</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/index.css" />
-  </head>
 
-  <body>
-    <main>
-      <section id="intro">
-        <h1 class="intro__hed">
-          Uno por uno, quiénes son los jugadores con más chances de jugar en el Mundial
-        </h1>
-        <p>
-          
-        </p>
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>VD | Ejemplo Scrolly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
 
-      <section id="scrolly">
-        <figure></figure>
+<body>
+  <main>
+    <section id="intro">
+      <h1>
+        Los Favoritos de Spotify
+      </h1>
+      <h3> Explora los Artistas más Adorados por los usuarios</h3>
+    </section>
 
-        <article>
-          
-          <div class="step" data-step="artistName1">
-            <p>Artista mas escuchados de Juan</p>
-          </div>
 
-        </article>
+    <section id="scrolly">
+      <figure></figure>
+      <figure></figure>
 
-        <article>
-          <div class="step" data-step="artistName2">
-            <p>Artistas mas escuchados de Agus</p>
-          </div>
-        </article>
+      <article>
 
-      </section>
+        <div class="step" data-step="artistName1">
+          <p>Artista mas escuchados de Juan</p>
+        </div>
 
-      <section id="outro">
-      </section>
-    </main>
+      </article>
+
+      <article>
+        <div class="step" data-step="artistName2">
+          <p>Artistas mas escuchados de Agus</p>
+        </div>
+      </article>
+    </section>
+
+    <h2> Conoce a los artistas favoritos</h2>
+    <section class="centrar-botones">
+
+      <button class="boton-imagen">
+        <img class="imagen-boton" src="/data/artistas/TINI.png">
+      </button>
+
+      <button class="boton-imagen">
+        <img class="imagen-boton" src="/data/artistas/Tiago PZK.png">
+      </button>
+
+      <button class="boton-imagen">
+        <img class="imagen-boton" src="/data/artistas/Bad Bunny.png">
+      </button>
+
+      <button class="boton-imagen">
+        <img class="imagen-boton" src="/data/artistas/Rihanna.png">
+      </button>
+
+    </section>
+
+  
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <script type="module" src="./scripts/index.js"></script>
-  </body>
+</body>
+
+<hr>
+<footer>
+</div>
+<div class="footer-bottom">
+  <p class="tiny-text">
+    Copyright &copy; 2023
+  </p>
+</div>
+</footer>
+
 </html>

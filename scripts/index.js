@@ -8,6 +8,7 @@ let DataJuan = [];
 let DataAgus = [];
 let $step;
 
+
 //Inicializo scrollama
 let scroller = scrollama();
 
@@ -22,7 +23,7 @@ d3.csv("./data/Data-Juan.csv", d3.autoType).then(function (data) {
 d3.csv("./data/Data-Agus.csv", d3.autoType).then(function (data) {
   DataAgus = data;
   // kick things off
-  init();
+  //init();
 });
 
 function handleStepExit(response) {
@@ -60,10 +61,9 @@ function handleStepEnter(response) {
 
 function handleStepProgress(response) {
   // console.log(response);
-  //$figure.style("opacity", response.progress);
+  $figure.style("opacity", response.progress);
   $step = d3.select(response.element);
   // console.log($step.attr("data-step"));
-  $step.select(".progress").text(d3.format(".1%")(response.progress));
 }
 
 function init() {
@@ -73,9 +73,9 @@ function init() {
   scroller
     .setup({
       step: "#scrolly article .step",
-      offset: 0.33,
+      offset: 0.1,
       debug: false,
-      progress: true,
+
     })
     .onStepEnter(handleStepEnter)
     .onStepExit(handleStepExit)
@@ -99,7 +99,6 @@ function createChart1(key) {
   //Me quedo con los nombres de los artistas
   let artistas = [];
   for (const x in filteredCountByArtist) {
-    let artista = filteredCountByArtist[x][0];
     filteredCountByArtist[x].push("../data/artistas/" + filteredCountByArtist[x][0] + ".png");
     artistas.push(filteredCountByArtist[x][0]);
   }
@@ -107,13 +106,9 @@ function createChart1(key) {
   //Filtro los datos por los artistas que se repiten mas de 150 veces
   DataJuan = DataJuan.filter((d) => artistas.includes(d.artistName1));
   console.log(filteredCountByArtist);
+  console.log(artistas);
 
   let chart = Plot.plot({
-    style: {
-      fontSize: 10,
-    },
-   
-
 
     marks: [
 
@@ -149,18 +144,15 @@ function createChart1(key) {
         height: 115,
       }),
       Plot.text(filteredCountByArtist,{
-        text: d => d[1],
-        y: d => d[1] + 80,
+        text: d => d[1].toString(),
+        y: d => d[1] + 60,
         x: d => d[0],
-     
-        fontSize: 20,
-        align: 'center',
-        baseline: 'middle',
+  
       }),
     ],
     
     width: 800,
-    height: 500,
+    height: 600,
     marginBottom: 100,
     nice: true,
     color: true,
@@ -240,17 +232,15 @@ function createChart2(key) {
 
       Plot.text(filteredCountByArtist,{
         text: d => d[1],
-        y: d => d[1] + 200,
+        y: d => d[1] + 150,
         x: d => d[0],
      
-        fontSize: 20,
-        align: 'center',
-        baseline: 'middle',
+
       }),
     ],
     
     width: 800,
-    height: 500,
+    height: 600,
     marginBottom: 100,
     nice: true,
     color: true,
