@@ -1,8 +1,11 @@
-var artistaSeleccionado
+var artistaSeleccionado = 'TINI'
 let dataJuan = [];
 let dataAgus = [];
 let ChartData = [];
-var subConjunto = [];
+
+if(artistaSeleccionado =='TINI'){
+    createChart()
+}
 
 function botonSeleccionado(nombreArtista) {
     //Recibimos el value del boton por parámetro y como los elementos del html tienen el mismo
@@ -10,6 +13,35 @@ function botonSeleccionado(nombreArtista) {
     artistaSeleccionado = document.getElementById(nombreArtista).value;
     createChart()
 }
+
+
+const meses = {
+    'Jan': 0,
+    'Feb': 1,
+    'Mar': 2,
+    'Apr': 3,
+    'May': 4,
+    'Jun': 5,
+    'Jul': 6,
+    'Aug': 7,
+    'Sep': 8,
+    'Oct': 9,
+    'Nov': 10,
+    'Dec': 11
+  };
+
+
+  function compararFechas(fecha1, fecha2) {
+    const [mes1, anio1] = fecha1.split(' ');
+    const [mes2, anio2] = fecha2.split(' ');
+    
+    if (anio1 !== anio2) {
+      return anio1.localeCompare(anio2);
+    } else {
+      return meses[mes1] - meses[mes2];
+    }
+  }
+  
 function createChart() {
     Promise.all([d3.csv("./data/Data-Juan.csv", d3.autoType), d3.csv("./data/Data-Agus.csv", d3.autoType)])
         .then(([dataJuan, dataAgus]) => {
@@ -20,11 +52,9 @@ function createChart() {
 
             ChartData.forEach(d => {
                 let date = d3.timeParse("%Y-%m-%d %H:%M")(d['endTime']);
-                d['month'] = d3.timeFormat("%b")(date);  // Obtener el nombre del mes completo
-                d['year'] = d3.timeFormat("%Y")(date);  // Obtener el año con cuatro dígitos
+                d['date'] = d3.timeFormat("%b %Y")(date);  // Obtener el nombre del mes completo
             });
-
-            console.log(ChartData)
+    
             let chart = Plot.plot({
                 //Acá tienen que cambiar el gráfico.
                 marks: [
@@ -32,28 +62,34 @@ function createChart() {
                         Plot.groupX(
                             { y: 'count'},
                             {
-                                x: d => `${d.month} ${d.year}`,
-                                curve: 'natural',
-                                strokeWidth: 3,
+                                x: 'date',
+                                strokeWidth: 5,
                                 opacity: 0.8,
                                 stroke: d => d.artistName == "TINI" ? '#E49AD3' : d.artistName === 'Rihanna' ? '#62009E': d.artistName === "Tiago PZK" ? '#A3BFA3' : d.artistName === 'Bad Bunny' ? '#F5C974':'#0000FF',
                             },
+
                         ),
                     ),
 
-                    Plot.axisX({
-                        label: null,
-                        fontSize: '15',
-                    }),
-
-                    Plot.axisY({
-                        label: null,
-                       
-                      }),
                 ],
-                width: 1200,
+
+                x:{
+                    label: null,
+                    //tickFormat: d3.utcFormat('%b %Y'),
+    
+                },
+    
+                y:{
+                    ticks: false,
+                    label: null,
+                },
+            
+
+                width: 1100,
                 height: 400,
             });
+
+            
 
             // Agregar el gráfico al contenedor
             d3.select('#grafico svg').remove()

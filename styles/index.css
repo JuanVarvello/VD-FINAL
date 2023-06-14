@@ -1,4 +1,5 @@
 * {
+  /* background-color: black; */
   box-sizing: border-box;
 }
 
@@ -6,25 +7,27 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #000000;
 }
 
-.centrar-botones{
-  display: flex;
-  justify-content: center;
+p{
+  text-align: center;
+  font-size: 1.5rem;
+  color:#000000
+
+
 }
-
-
 h1{
   font-size: 3rem;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 
 h2{
   font-size: 2rem;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -35,6 +38,7 @@ h3{
 }
 
 .chart{
+  padding-top: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,11 +46,15 @@ h3{
   max-height: auto;
 }
 
+.chart svg{
+  background-color: #000000;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   min-height: 1280px;
-  color: #3b3b3b;
+  color: #ffffff;
   font-size: 24px;
 }
 
@@ -78,36 +86,14 @@ nav {
 
 #scrolly {
   position: relative;
-  /* background-color: #f3f3f3; */
+  
   padding: 1rem;
 }
 
 #scrolly svg  {
   display: block;
   margin: auto;
-}
-
-article {
-  position: relative;
-  padding: 0;
-  max-width: 20rem;
-  margin: 0 auto;
-}
-
-.boton-imagen{
-  padding-top: 5%;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.imagen-boton{
-  width: 200px;
-  height: 200px;
-}
-
-.imagen-boton:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: #000000;
 }
 
 figure {
@@ -136,33 +122,63 @@ figure p {
   transform: translate(-50%, -50%);
   font-size: 30px;
   font-weight: 900;
+  color: transparent;
+  
 }
 
 .step {
   margin: 0 auto 2rem auto;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0);
   height: 100vh;
 }
 
 .step.is-active p {
   opacity: 1;
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
+  /* color: #ffffff; */
+  
 }
 
 .step p {
   text-align: center;
   padding: 0.5rem;
   font-size: 25px;
-  width: 400px;
-  opacity: 0.5;
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
+  /* width: 400px; */
+  background-color: rgb(255, 255, 255);
 }
 
+
+article {
+  position: relative;
+  padding: 0;
+  max-width: 20rem;
+  margin-left: 20px;
+}
+
+.boton-imagen{
+  padding-top: 3%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.imagen-boton{
+  width: 200px;
+  height: 200px;
+}
+
+.centrar-botones{
+  display: flex;
+  justify-content: center;
+}
+
+
+.imagen-boton:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
 footer{
-  color: #000000;
+  color: #ffffff;
   position: sticky; 
   width: 100%;
 }
@@ -171,6 +187,7 @@ footer{
 g[aria-label="text"] text {
   font-weight: bold;
   font-size: 15px;
+  color:#ffffff;
 }
 
 .tiny-text{

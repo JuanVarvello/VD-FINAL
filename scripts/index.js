@@ -8,7 +8,6 @@ let DataJuan = [];
 let DataAgus = [];
 let $step;
 
-
 //Inicializo scrollama
 let scroller = scrollama();
 
@@ -73,7 +72,7 @@ function init() {
   scroller
     .setup({
       step: "#scrolly article .step",
-      offset: 0.1,
+      offset:1,
       debug: false,
 
     })
@@ -151,7 +150,7 @@ function chart_Juan() {
     ],
     
     width: 800,
-    height: 600,
+    height: 700,
     marginBottom: 100,
     nice: true,
     color: true,
@@ -235,7 +234,7 @@ function chart_Agus() {
     ],
     
     width: 800,
-    height: 600,
+    height: 700,
     marginBottom: 100,
     nice: true,
     color: true,
