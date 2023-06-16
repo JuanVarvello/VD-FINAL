@@ -97,7 +97,7 @@ function chart_Juan() {
   //Me quedo con los nombres de los artistas
   let artistas = [];
   for (const x in filteredCountByArtist) {
-    filteredCountByArtist[x].push("../data/artistas/" + filteredCountByArtist[x][0] + ".png");
+    filteredCountByArtist[x].push("/data/artistas/" + filteredCountByArtist[x][0] + ".png");
     artistas.push(filteredCountByArtist[x][0]);
   }
 
