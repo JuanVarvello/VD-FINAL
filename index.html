@@ -45,31 +45,47 @@
 
     <section class="centrar-botones">
 
-      <button class="boton-imagen" id="TINI" value="TINI" onclick="botonSeleccionado(value)">
-        <img class="imagen-boton" src="/data/artistas/TINI.png">
+      <button class="boton-imagen" id="TINI" value="TINI" onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/artistas/TINI.png">
       </button>
 
-      <button class="boton-imagen" id="Tiago PZK" value="Tiago PZK" onclick="botonSeleccionado(value)">
-        <img class="imagen-boton" src="/data/artistas/Tiago PZK.png">
+      <button class="boton-imagen" id="Tiago PZK" value="Tiago PZK"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/artistas/Tiago PZK.png">
       </button>
 
-      <button class="boton-imagen" id="Bad Bunny" value="Bad Bunny" onclick="botonSeleccionado(value)">
-        <img class="imagen-boton" src="/data/artistas/Bad Bunny.png">
+      <button class="boton-imagen" id="Bad Bunny" value="Bad Bunny"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/artistas/Bad Bunny.png">
       </button>
 
-      <button class="boton-imagen" id="Rihanna" value="Rihanna" onclick="botonSeleccionado(value)">
-        <img class="imagen-boton" src="/data/artistas/Rihanna.png">
+      <button class="boton-imagen" id="Rihanna" value="Rihanna"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/artistas/Rihanna.png">
       </button>
     </section>
 
-    <h3> Que tanto fue escuchado durante el 2022/23</h3>
-    <div class="chart" id="grafico"></div>
+    <h3> Que tanto fue escuchado durante el 2022/23?</h3>
+    <div class="chart" id="grafico1"></div>
+
+    <h3>Como son las TOP 5 canciones del artista?</h3>
+
+    <img class="referencias" src = "data/referencias.png">
+    <form>
+      <select id="SelectorCanciones" name="Canciones" onchange="cambiarImagen(this.form)"></select>
+
+      <div class = "contenedor-imagen">
+        <img class = "onda" name="onda" id="onda" alt="ondas">
+      </div>
+
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <script type="module" src="./scripts/index.js"></script>
     <script src="./scripts/graph-canciones.js"></script>
+    <script src="./scripts/graph-ondas.js"></script>
 </body>
 
 <hr>

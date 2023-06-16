@@ -25,25 +25,25 @@ h1{
 }
 
 h2{
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #ffffff;
   text-align: center;
 }
 
 h3{
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #9a9a9a;
   text-align: center;
+  padding-top: 3%;
 }
 
 .chart{
   padding-top: 1%;
-  display: flex;
-  justify-content: center;
+  display: block;
   align-items: center;
-  max-width: auto;
-  max-height: auto;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .chart svg{
@@ -74,6 +74,13 @@ nav {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
+select {
+  margin-top: 5rem;
+  display: block;
+  margin: auto;
+}
+
 
 #outro {  
   max-width: 40rem;
@@ -137,14 +144,6 @@ figure p {
   /* color: #ffffff; */
   
 }
-.step p2{
-  opacity: 1;
-  color: #ffffff;
-  text-align: center;
-  font-size: 20px;
-  justify-content: center;
-
-}
 
 .step p {
   text-align: center;
@@ -154,6 +153,19 @@ figure p {
   background-color: rgb(255, 255, 255);
 }
 
+.step.is-active p2{
+  opacity: 1;
+  /* color: #ffffff; */
+  
+}
+
+.step p2{
+  opacity: 1;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+
+}
 
 article {
   position: relative;
@@ -167,6 +179,37 @@ article {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+select{
+  position: relative;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: #000000;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+img.referencias{
+  padding-bottom: 2%;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+
+img.onda{
+  padding-top: 4%;
+  padding-bottom: 2%;
+  display: block;
+  height: 50%;
+  margin: 0 auto;
+}
+
+div.contenedor-imagen {
+  display: block;
+  margin: 0 auto;
 }
 
 .imagen-boton{
@@ -191,18 +234,12 @@ footer{
   width: 100%;
 }
 
-/* Plot */
-g[aria-label="text"] text {
-  font-weight: bold;
-  font-size: 15px;
-  color:#ffffff;
-}
-
 .tiny-text{
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  color: #ffffff;
 }
 

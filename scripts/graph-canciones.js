@@ -5,7 +5,6 @@ let ChartData = [];
 let maxValue = 0;
 
 if(artistaSeleccionado =='TINI'){
-    
     createChart()
 }
 
@@ -48,27 +47,32 @@ function createChart() {
 
                 ],
 
+                style:{
+                    fontSize: 15,
+                },
+
                 x:{
                     label: null,
                     tickFormat: d3.utcFormat('%b %Y'),
-    
+                    
                 },
     
                 y:{
                     ticks: false,
                     label: null,
                 },
-            
 
+                
+                marginBottom: 50,
                 width: 1100,
-                height: 400,
+                height: 500,
             });
 
             
 
             // Agregar el gráfico al contenedor
-            d3.select('#grafico svg').remove()
-            d3.select('#grafico').append(() => chart)
+            d3.select('#grafico1 svg').remove()
+            d3.select('#grafico1').append(() => chart)
 
         });
 }
