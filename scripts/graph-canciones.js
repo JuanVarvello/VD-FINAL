@@ -2,8 +2,10 @@ var artistaSeleccionado = 'TINI'
 let dataJuan = [];
 let dataAgus = [];
 let ChartData = [];
+let maxValue = 0;
 
 if(artistaSeleccionado =='TINI'){
+    
     createChart()
 }
 
@@ -13,34 +15,6 @@ function botonSeleccionado(nombreArtista) {
     artistaSeleccionado = document.getElementById(nombreArtista).value;
     createChart()
 }
-
-
-const meses = {
-    'Jan': 0,
-    'Feb': 1,
-    'Mar': 2,
-    'Apr': 3,
-    'May': 4,
-    'Jun': 5,
-    'Jul': 6,
-    'Aug': 7,
-    'Sep': 8,
-    'Oct': 9,
-    'Nov': 10,
-    'Dec': 11
-  };
-
-
-  function compararFechas(fecha1, fecha2) {
-    const [mes1, anio1] = fecha1.split(' ');
-    const [mes2, anio2] = fecha2.split(' ');
-    
-    if (anio1 !== anio2) {
-      return anio1.localeCompare(anio2);
-    } else {
-      return meses[mes1] - meses[mes2];
-    }
-  }
   
 function createChart() {
     Promise.all([d3.csv("./data/Data-Juan.csv", d3.autoType), d3.csv("./data/Data-Agus.csv", d3.autoType)])
@@ -51,9 +25,10 @@ function createChart() {
             ChartData = dataAgusFiltrada.concat(dataJuanFiltrada)
 
             ChartData.forEach(d => {
-                let date = d3.timeParse("%Y-%m-%d %H:%M")(d['endTime']);
-                d['date'] = d3.timeFormat("%b %Y")(date);  // Obtener el nombre del mes completo
-            });
+                let date = new Date(d3.timeParse("%Y-%m-%d %H:%M")(d['endTime']));
+                d['date'] = new Date(date.getFullYear(),date.getMonth()); 
+ 
+            })
     
             let chart = Plot.plot({
                 //Acá tienen que cambiar el gráfico.
@@ -75,7 +50,7 @@ function createChart() {
 
                 x:{
                     label: null,
-                    //tickFormat: d3.utcFormat('%b %Y'),
+                    tickFormat: d3.utcFormat('%b %Y'),
     
                 },
     
