@@ -145,6 +145,8 @@ function chart_Juan() {
         text: d => d[1],
         y: d => d[1] + 60,
         x: d => d[0],
+        fontSize: 20,
+        fontWeight: 700,
   
       }),
     ],
@@ -228,6 +230,8 @@ function chart_Agus() {
         text: d => d[1],
         y: d => d[1] + 150,
         x: d => d[0],
+        fontSize: 20,
+        fontWeight: 700,
      
 
       }),

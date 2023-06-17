@@ -31,11 +31,18 @@ h2{
   text-align: center;
 }
 
+
+hr{
+  color: #9a9a9a;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
 h3{
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #9a9a9a;
   text-align: center;
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
 .chart{
@@ -149,6 +156,7 @@ figure p {
   text-align: center;
   padding: 0.5rem;
   font-size: 25px;
+  font-weight: 700;
   /* width: 400px; */
   background-color: rgb(255, 255, 255);
 }
@@ -179,10 +187,12 @@ article {
   background: none;
   border: none;
   cursor: pointer;
+
 }
 
 select{
-  position: relative;
+  align-content: center;
+  position: center;
   padding-right: 5rem;
   padding-left: 5rem;
   padding-top: 1rem;
@@ -200,11 +210,12 @@ img.referencias{
 }
 
 img.onda{
+  margin-top: 4%;
   padding-top: 4%;
   padding-bottom: 2%;
   display: block;
-  height: 50%;
-  margin: 0 auto;
+  height: 300px;
+  margin: auto;
 }
 
 div.contenedor-imagen {
@@ -213,8 +224,8 @@ div.contenedor-imagen {
 }
 
 .imagen-boton{
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 
 .centrar-botones{

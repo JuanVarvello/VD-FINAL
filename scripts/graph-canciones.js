@@ -37,8 +37,8 @@ function createChart() {
                             { y: 'count'},
                             {
                                 x: 'date',
-                                strokeWidth: 5,
-                                opacity: 0.8,
+                                strokeWidth: 6,
+                                opacity: 1,
                                 stroke: d => d.artistName == "TINI" ? '#E49AD3' : d.artistName === 'Rihanna' ? '#62009E': d.artistName === "Tiago PZK" ? '#A3BFA3' : d.artistName === 'Bad Bunny' ? '#F5C974':'#0000FF',
                             },
 
@@ -62,9 +62,9 @@ function createChart() {
                     label: null,
                 },
 
-                
+            
                 marginBottom: 50,
-                width: 1100,
+                width: 1000,
                 height: 500,
             });
 
