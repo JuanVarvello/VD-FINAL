@@ -13,8 +13,32 @@
   <main>
     <section id="intro">
       <h1>
-        Los Favoritos de Spotify
+        El Universo musical de Spotify
       </h1>
+      <div class="text-container">
+        <p>
+          En el vasto universo musical de Spotify, la diversidad de artistas
+          es una verdadera joya que brilla con colores vibrantes y matices únicos.
+          Esta plataforma de streaming nos ofrece un pase de entrada a un mundo de
+          melodías y ritmos que trascienden géneros, fronteras y culturas.
+          Aquí, podemos deleitarnos con la riqueza y variedad de voces, instrumentos
+          y estilos musicales que se entrelazan en una sinfonía de creatividad sin límites.
+          Desde los sonidos embriagadores del jazz hasta los ritmos enérgicos del hip-hop,
+          desde las baladas íntimas hasta los himnos poderosos del rock, Spotify es el hogar
+          de una vasta comunidad de artistas que trae a nuestras vidas una amplia gama de
+          emociones y experiencias. En este fascinante ecosistema, descubrirás talentos emergentes,
+          leyendas consagradas y voces que desafían las expectativas, desafiando la norma y
+          forjando nuevos caminos en el mundo de la música. La diversidad de artistas en Spotify
+          es un testimonio de la capacidad humana para expresarse a través de la melodía,
+          y nos invita a explorar, disfrutar y celebrar la infinita paleta de colores que conforma
+          la música en todas sus formas.
+        </p>
+      </div>
+
+      <div class = "hr-container">
+        <hr>
+      </div>
+
       <h3> Explora nuestros artistas más escuchados</h3>
     </section>
 
@@ -26,56 +50,76 @@
 
         <div class="step" data-step="juan">
           <p>Artista mas escuchados de Juan</p>
-          <p2>Podemos ver que los 3 artistas favoritos de Juan son de nacionalidad Argentina.</p2>
+          <p2>Podemos observar que los tres artistas favoritos de Juan son de nacionalidad argentina: <br>
+            <b>María Becerra, Tiago PZK y TINI.</b>
+          </p2>
         </div>
         <div class="step" data-step="agus">
           <p>Artistas mas escuchados de Agus</p>
-          <p2>Por otro lado, los 3 artistas favoritos de Agus son de nacionalidad extranjera.</p2>
+          <p2>Por otro lado, los tres artistas favoritos de Agus son de nacionalidad extranjera:<br>
+            <b>Bad Bunny, Rihanna y Billie Eilish.</b>
+          </p2>
         </div>
 
       </article>
-
-      <!-- <article>
-      </article> -->
     </section>
 
-    <hr>
+    <div class="hr-container">
+      <hr>
+    </div>
 
-    <h2> Conoce a nuestros artistas favoritos</h2>
+
+    <h2> Conoce mas sobre nuestros artistas favoritos</h2>
 
     <section class="centrar-botones">
 
-      <button class="boton-imagen" id="TINI" value="TINI" onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+      <button class="boton-imagen" id="TINI" value="TINI"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
         <img class="imagen-boton" src="data/artistas/TINI.png">
       </button>
 
       <button class="boton-imagen" id="Tiago PZK" value="Tiago PZK"
-        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
         <img class="imagen-boton" src="data/artistas/Tiago PZK.png">
       </button>
 
       <button class="boton-imagen" id="Bad Bunny" value="Bad Bunny"
-        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
         <img class="imagen-boton" src="data/artistas/Bad Bunny.png">
       </button>
 
       <button class="boton-imagen" id="Rihanna" value="Rihanna"
-        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
         <img class="imagen-boton" src="data/artistas/Rihanna.png">
       </button>
     </section>
 
-    <h3> Que tanto fue escuchado durante el 2022/23?</h3>
-    <div class="chart" id="grafico1"></div>
+    <h3>¿Quién es?</h3>
 
-    <h3>Como son las TOP 5 canciones del artista?</h3>
+    <div class="text-container">
+      <p class="descripcion" id="descripcion">
+        TINI, cuyo nombre real es Martina Stoessel, es una cantante, actriz y bailarina argentina.
+        Ganó reconocimiento internacional por su papel protagónico en la exitosa serie de Disney Channel
+        "Violetta". Como cantante solista, ha lanzado varios álbumes y sus canciones combinan diferentes
+        géneros como el pop, el reggaetón y la música latina.
+      </p>
+    </div>
 
-    <img class="referencias" src = "data/referencias.png">
+    <h3> ¿Con qué frecuencia fue escuchado durante el 2022/23?</h3>
+
+
+      <div class="chart" id="grafico1"></div>
+
+    
+
+    <h3>¿Cómo son las TOP 5 canciones del artista?</h3>
+
+    <img class="referencias" src="data/referencias.png">
     <form>
       <select id="SelectorCanciones" name="Canciones" onchange="cambiarImagen(this.form)"></select>
 
-      <div class = "contenedor-imagen">
-        <img class = "onda" name="onda" id="onda" alt="ondas">
+      <div class="contenedor-imagen">
+        <img class="onda" name="onda" id="onda" alt="ondas">
       </div>
 
     </form>
