@@ -37,7 +37,8 @@ if(artistaSeleccionado === 'TINI'){
     añadirOpcion("La Loto")
     añadirOpcion("La Triple T")
     añadirOpcion("Cupido")
-    añadirOpcion("Mienteme")  
+    añadirOpcion("Mienteme")
+    document.onda.src = ondas["Muñecas"]
 }
 
 //Funcion para agregar opciones al selector de canciones
