@@ -126,7 +126,17 @@ function chart_Juan() {
           { y: 'count' },
           {
             x: 'artistName', 
-            fill: d => d.artistName === 'Billie Eilish' ? '#009D23' : d.artistName === 'Bizarrap' ? '#669BF1' : d.artistName === "Maria Becerra" ? '#906D93' : d.artistName === "Tiago PZK" ? '#A3BFA3' : d.artistName === 'Bad Bunny' ? '#F5C974': d.artistName === 'Tate McRae' ? '#C56B6E': d.artistName === 'Emilia' ? '#0A4297': d.artistName === 'Sickick' ? '#787878': d.artistName === 'TINI' ? '#E49AD3': d.artistName === 'Alessia Cara' ? '#BAC5C8': d.artistName === 'Dua Lipa' ? '#75ACCB' : d.artistName === 'Miley Cyrus' ? '#D13A71': d.artistName === "Zoe Gotusso" ? '#FDC4B8' : d.artistName === 'Rihanna' ? '#62009E': '#000000',   
+            fill: d => d.artistName === 'Billie Eilish' ? '#009D23' : 
+            d.artistName === 'Bizarrap' ? '#669BF1' : 
+            d.artistName === "Maria Becerra" ? '#906D93' : 
+            d.artistName === "Tiago PZK" ? '#A3BFA3' : 
+            d.artistName === 'Bad Bunny' ? '#F5C974': 
+            d.artistName === 'Tate McRae' ? '#C56B6E': 
+            d.artistName === 'Emilia' ? '#0A4297': 
+            d.artistName === 'Sickick' ? '#787878': 
+            d.artistName === 'TINI' ? '#E49AD3': 
+            '#000000',
+
             opacity: 0.5,
             sort: { x: 'y', reverse: true },
           },
@@ -211,7 +221,16 @@ function chart_Agus() {
           { y: 'count' },
           {
             x: 'artistName', 
-            fill: d => d.artistName === 'Billie Eilish' ? '#009D23' : d.artistName === 'Rihanna' ? '#62009E' : d.artistName === "Maria Becerra" ? '#906D93' : d.artistName === "Zoe Gotusso" ? '#FDC4B8' : d.artistName === 'Bad Bunny' ? '#F5C974': d.artistName === 'Doja Cat' ? '#BB819A': d.artistName === 'Miley Cyrus' ? '#D13A71': d.artistName === 'Dua Lipa' ? '#75ACCB': d.artistName === 'Alessia Cara' ? '#BAC5C8' : '#000000', 
+            fill: d => d.artistName === 'Billie Eilish' ? '#009D23' : 
+            d.artistName === 'Rihanna' ? '#62009E' : 
+            d.artistName === "Maria Becerra" ? '#906D93' : 
+            d.artistName === "Zoe Gotusso" ? '#FDC4B8' : 
+            d.artistName === 'Bad Bunny' ? '#F5C974': 
+            d.artistName === 'Doja Cat' ? '#BB819A': 
+            d.artistName === 'Miley Cyrus' ? '#D13A71': 
+            d.artistName === 'Dua Lipa' ? '#75ACCB': 
+            d.artistName === 'Alessia Cara' ? '#BAC5C8' : 
+            '#000000', 
             sort: { x: 'y', reverse: true },
             opacity: 0.5,
           },
@@ -232,8 +251,6 @@ function chart_Agus() {
         x: d => d[0],
         fontSize: 20,
         fontWeight: 700,
-     
-
       }),
     ],
     
