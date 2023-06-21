@@ -35,7 +35,7 @@
         </p>
       </div>
 
-      <div class = "hr-container">
+      <div class="hr-container">
         <hr>
       </div>
 
@@ -71,50 +71,79 @@
 
     <h2> Conoce mas sobre nuestros artistas favoritos</h2>
 
-    <section class="centrar-botones">
 
+
+    <section class="centrar-perfiles">
+
+      <div class="perfil-container">
+        <img class="perfil" src="data/artistas/TINI.png">
+        <p class="descripcion" id="descripcion">
+          TINI, cuyo nombre real es Martina Stoessel, es una cantante, actriz y bailarina argentina.
+          Ganó reconocimiento internacional por su papel protagónico en la exitosa serie de Disney Channel
+          "Violetta". Como cantante solista, ha lanzado varios álbumes y sus canciones combinan diferentes
+          géneros como el pop, el reggaetón y la música latina.
+        </p>
+      </div>
+
+      <div class = "perfil-container">
+        <img class="perfil" src="data/artistas/Tiago PZK.png">
+        <p class="descripcion" id="descripcion">
+          Tiago PZK es un cantante de trap y reggaetón argentino. Es reconocido por su estilo fresco y sus ritmos contagiosos. 
+          Sus letras a menudo abordan temas relacionados con el amor, las fiestas y la vida urbana. Ha logrado cautivar a un amplio 
+          público joven en Argentina y más allá.
+      </div>
+
+      <div class = "perfil-container">
+        <img class="perfil" src="data/artistas/Bad Bunny.png">
+        <p class="descripcion" id="descripcion">
+          Bad Bunny es un cantante y compositor puertorriqueño reconocido por su influencia en la música urbana y el trap latino. 
+          Ha logrado éxitos en las listas de popularidad a nivel mundial y es conocido por su estilo único y letras provocativas. 
+          Su música ha trascendido barreras lingüísticas y ha colaborado con artistas internacionales.
+      </div>
+
+      <div class = "perfil-container">
+        <img class="perfil" src="data/artistas/Rihanna.png">
+        <p class="descripcion" id="descripcion">
+          Rihanna es una cantante, actriz y empresaria de origen barbadense. Ha alcanzado fama mundial con su versatilidad musical 
+          y su carisma en el escenario. A lo largo de su carrera, ha experimentado con diversos géneros como el pop, R&B, dancehall 
+          y reggae. También es reconocida por su estilo icónico y su éxito en el mundo de la moda y la belleza.
+      </div>
+    </section>
+
+
+    <section class="centrar-botones">
       <button class="boton-imagen" id="TINI" value="TINI"
-        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
-        <img class="imagen-boton" src="data/artistas/TINI.png">
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-TINI.png">
       </button>
 
       <button class="boton-imagen" id="Tiago PZK" value="Tiago PZK"
-        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
-        <img class="imagen-boton" src="data/artistas/Tiago PZK.png">
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-TIAGO.png">
       </button>
 
       <button class="boton-imagen" id="Bad Bunny" value="Bad Bunny"
-        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
-        <img class="imagen-boton" src="data/artistas/Bad Bunny.png">
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-BADBUNNY.png">
       </button>
 
       <button class="boton-imagen" id="Rihanna" value="Rihanna"
-        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value);CambiarTexto(value)">
-        <img class="imagen-boton" src="data/artistas/Rihanna.png">
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-Rihanna.png">
       </button>
     </section>
 
-    <h3>¿Quién es?</h3>
-
-    <div class="text-container">
-      <p class="descripcion" id="descripcion">
-        TINI, cuyo nombre real es Martina Stoessel, es una cantante, actriz y bailarina argentina.
-        Ganó reconocimiento internacional por su papel protagónico en la exitosa serie de Disney Channel
-        "Violetta". Como cantante solista, ha lanzado varios álbumes y sus canciones combinan diferentes
-        géneros como el pop, el reggaetón y la música latina.
-      </p>
-    </div>
 
     <h3> ¿Con qué frecuencia fue escuchado durante el 2022/23?</h3>
 
 
-      <div class="chart" id="grafico1"></div>
+    <div class="chart" id="grafico1"></div>
 
-    
+
 
     <h3>¿Cómo son las TOP 5 canciones del artista?</h3>
 
-    <img class="referencias" src="data/referencias.png">
+    <img class="referencias" src="data/referencias.jpeg">
     <form>
       <select id="SelectorCanciones" name="Canciones" onchange="cambiarImagen(this.form)"></select>
 

@@ -221,9 +221,9 @@ select{
 }
 
 img.referencias{
-  padding-bottom: 2%;
+  padding-bottom: 1%;
   display: block;
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -246,14 +246,34 @@ div.contenedor-imagen {
   
 }
 
+.perfil{
+  width: 200px;
+  height: 200px;
+}
+
+.perfil-container{
+  align-items: center;
+  justify-content: center;
+}
+
+.descripcion{
+  max-width: 300px;
+}
+
 .imagen-boton{
-  width: 250px;
-  height: 250px;
+  width: 80%
+
 }
 
 .centrar-botones{
   display: flex;
   justify-content: center;
+}
+
+.centrar-perfiles{
+  display: flex;
+  justify-content: center;
+  
 }
 
 
