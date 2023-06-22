@@ -4,6 +4,7 @@ let dataAgus = [];
 let ChartData = [];
 let maxValue = 0;
 
+
 if (artistaSeleccionado == 'TINI') {
     createChart()
 }
