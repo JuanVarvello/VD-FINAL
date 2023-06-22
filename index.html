@@ -11,10 +11,13 @@
 
 <body>
   <main>
+
     <section id="intro">
+
       <h1>
         El Universo musical de Spotify
       </h1>
+
       <div class="text-container">
         <p>
           En el vasto universo musical de Spotify, la diversidad de artistas
@@ -40,24 +43,23 @@
       </div>
 
       <h2> Explora nuestros artistas más escuchados</h2>
-    </section>
 
+    </section>
 
     <section id="scrolly">
       <figure></figure>
-
       <article>
 
         <div class="step" data-step="juan">
           <p>Artista mas escuchados de Juan</p>
-          <p2>Podemos observar que los tres artistas favoritos de Juan son de nacionalidad argentina: <br>
-            <b>María Becerra, Tiago PZK y TINI.</b>
+          <p2>Podemos observar que la mayor cantidad de reproducciones de Juan son de tres artistas nacionalidad argentina: <br><br>
+            <b>1. TINI <br><br>2. Tiago PZK <br><br>3. María Becerra</b>
           </p2>
         </div>
         <div class="step" data-step="agus">
           <p>Artistas mas escuchados de Agus</p>
-          <p2>Por otro lado, los tres artistas favoritos de Agus son de nacionalidad extranjera:<br>
-            <b>Bad Bunny, Rihanna y Billie Eilish.</b>
+          <p2>Por otro lado, la mayor cantidad de reproducciones de Agus son de artistas de nacionalidad extranjera:<br><br>
+            <b>1. Bad Bunny <br><br>2. Rihanna <br><br>3. Billie Eilish</b>
           </p2>
         </div>
 
@@ -68,10 +70,7 @@
       <hr>
     </div>
 
-
     <h2> Conoce mas sobre nuestros artistas favoritos</h2>
-
-
 
     <div class="centrar-perfiles">
 
@@ -87,7 +86,7 @@
       <div class="perfil-container">
         <img class="perfil" src="data/artistas/Tiago PZK.png">
         <p class="descripcion" id="descripcion">
-          Tiago PZK es un cantante de trap y reggaetón argentino. 
+          Tiago PZK es un cantante de trap y reggaetón argentino.
           Sus letras a menudo abordan temas relacionados con el amor, las fiestas y la vida urbana. Ha logrado cautivar
           a un amplio
           público joven en Argentina y más allá.
@@ -100,7 +99,6 @@
           trap latino.
           Ha logrado éxitos en las listas de popularidad a nivel mundial y es conocido por su estilo único y letras
           provocativas.
-          
       </div>
 
       <div class="perfil-container">
@@ -110,53 +108,53 @@
           versatilidad musical
           y su carisma en el escenario. A lo largo de su carrera, ha experimentado con diversos géneros como el pop,
           R&B, dancehall
-          y reggae. 
+          y reggae.
       </div>
+
     </div>
 
-    
-      <section class="centrar-botones">
-        <button class="boton" id="TINI" value="TINI"
-          onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
-          <img class="imagen-boton" src="data/botones/boton-TINI.png">
-        </button>
 
-        <button class="boton" id="Tiago PZK" value="Tiago PZK"
-          onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
-          <img class="imagen-boton" src="data/botones/boton-TIAGO.png">
-        </button>
+    <section class="centrar-botones">
 
-        <button class="boton" id="Bad Bunny" value="Bad Bunny"
-          onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
-          <img class="imagen-boton" src="data/botones/boton-BADBUNNY.png">
-        </button>
+      <button class="boton" id="TINI" value="TINI"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-TINI.png">
+      </button>
 
-        <button class="boton" id="Rihanna" value="Rihanna"
-          onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
-          <img class="imagen-boton" src="data/botones/boton-Rihanna.png">
-        </button>
-      </section>
+      <button class="boton" id="Tiago PZK" value="Tiago PZK"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-TIAGO.png">
+      </button>
 
-      <section>
+      <button class="boton" id="Bad Bunny" value="Bad Bunny"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-BADBUNNY.png">
+      </button>
+
+      <button class="boton" id="Rihanna" value="Rihanna"
+        onclick="botonSeleccionado(value);botonSeleccionado2(value);defaultOnda(value)">
+        <img class="imagen-boton" src="data/botones/boton-Rihanna.png">
+      </button>
+
+    </section>
+
+    <section>
+
       <h3> ¿Con qué frecuencia fue escuchado durante el 2022/23?</h3>
-
-
       <div class="chart" id="grafico1"></div>
 
-
-
       <h3>¿Cómo son las TOP 5 canciones del artista?</h3>
-
       <img class="referencias" src="data/referencias.png">
+
       <form>
         <select id="SelectorCanciones" name="Canciones" onchange="cambiarImagen(this.form)"></select>
-
         <div class="contenedor-imagen">
           <img class="onda" name="onda" id="onda" alt="ondas">
         </div>
-
       </form>
+
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://unpkg.com/scrollama"></script>

@@ -60,6 +60,7 @@ h3{
   justify-content: center;
   align-items: center;
   padding-bottom: 2%;
+  font-size: 20px;
 }
 
 .chart svg{
@@ -225,7 +226,7 @@ select{
 img.referencias{
   padding-bottom: 3%;
   display: block;
-  width: 60%;
+  width: 62%;
   margin: 0 auto;
 }
 

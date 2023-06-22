@@ -106,6 +106,7 @@ function chart_Juan() {
 
   let chart = Plot.plot({
 
+
     marks: [
 
       Plot.axisY({
@@ -117,7 +118,7 @@ function chart_Juan() {
       Plot.axisX({
         label: null,
         tickRotate:-45,
-        fontSize: '15',
+        fontSize: '18',
       }),
       
       Plot.barY(
@@ -196,9 +197,7 @@ function chart_Agus() {
   console.log(filteredCountByArtist);
 
   let chart = Plot.plot({
-    style: {
-      fontSize: 10,
-    },
+    
 
     marks: [
 
@@ -212,7 +211,7 @@ function chart_Agus() {
 
         label: null,
         tickRotate:-45,
-        fontSize: '15',
+        fontSize: '18',
       }),
       
       Plot.barY(
